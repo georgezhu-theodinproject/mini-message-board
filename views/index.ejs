@@ -8,13 +8,15 @@
   </head>
   <body>
     <div class="chat">
-      <div class="message">
-        <% messages.forEach((message) =>{ %>
-        <div class="user"><%= message.user %></div>
-        <div class="text"><%= message.text %></div>
-        <div class="time"><%= message.added.toLocaleTimeString() %></div>
-        <% }); %>
-      </div>
+      <% messages.forEach((message) =>{ %>
+      <a href="/messages/<%= message.id %>" class="message-link">
+        <div class="message">
+          <div class="user"><%= message.user %></div>
+          <div class="text"><%= message.text %></div>
+          <div class="time"><%= message.added.toLocaleTimeString() %></div>
+        </div>
+      </a>
+      <% }); %>
     </div>
   </body>
 </html>
