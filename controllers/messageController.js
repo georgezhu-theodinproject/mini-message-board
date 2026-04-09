@@ -6,6 +6,13 @@ async function getMessages(req, res) {
   res.render("index", { messages });
 }
 
+async function getMessage(req, res) {
+  const { id } = req.params;
+  const message = await db.getMessage(id);
+  console.log("Message: ", message);
+  res.render("message", { message });
+}
+
 async function createMessageGet(req, res) {
   res.render("form");
 }
@@ -17,6 +24,7 @@ async function createMessagePost(req, res) {
 }
 
 module.exports = {
+  getMessage,
   getMessages,
   createMessageGet,
   createMessagePost,
