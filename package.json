@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/georgezhu-theodinproject/mini-message-board#readme",
   "dependencies": {
+    "dotenv": "^17.4.1",
     "ejs": "^4.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
   }
 }
