@@ -1,7 +1,23 @@
-<h1>message page</h1>
-
-<div class="message">
-  <div class="user"><%= message.user %></div>
-  <div class="text"><%= message.text %></div>
-  <div class="time"><%= message.added.toLocaleTimeString() %></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="chat">
+      <div class="chat-header">
+        <a href="/">← Back</a>
+      </div>
+      <div class="message">
+        <div class="message-meta">
+          <span class="user"><%= message.username %></span>
+          <span class="time"><%= message.added.toLocaleTimeString() %></span>
+        </div>
+        <div class="text"><%= message.text %></div>
+      </div>
+    </div>
+  </body>
+</html>
